@@ -1,12 +1,12 @@
 package za.co.ajk.spring5webapp.didemo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import za.co.ajk.spring5webapp.didemo.services.GreetingService;
 
 @Controller
+
 public class PropertyInjectedController {
     
     /**
@@ -14,7 +14,7 @@ public class PropertyInjectedController {
      * Spring will identify bean through reflection.
      */
     @Autowired
-    @Qualifier("greetingServiceImpl")
+    //@Qualifier("greetingServiceImpl") - remove as profile now determines
     private GreetingService greetingServiceImpl;
     
     public PropertyInjectedController() {
